@@ -25,7 +25,13 @@ export default function Home() {
         <div className="d--flex m--t-xlarge">
           <div className="ls-grid-column-two-thirds">
             <div className="ls-grid-column-two-thirds">
-              <h1>Sign in </h1>
+              <h1 className="m--b-xlarge">Successfully registered</h1>
+
+              <p className="m--b-xlarge p--large">
+                You are now registered with the Livestock Information Service,
+                you can now sign in with your details
+              </p>
+
               <div className="m--b-xlarge">
                 <Input label="Sign in Email" placeholder="Sign in Email" />
                 <Input
@@ -38,9 +44,22 @@ export default function Home() {
               <div className="m--b-xxlarge">
                 <LsLink type="button">Sign in</LsLink>
               </div>
-              <p className="p--large">
-                Not registered yet?{" "}
-                <LsLink url="cph">Register for an account</LsLink>
+              <p>
+                By registering an account you agree to our{" "}
+                <LsLink
+                  target="_blank"
+                  url="https://livestockinformation.org.uk/privacy/"
+                >
+                  privacy policy
+                </LsLink>{" "}
+                and{" "}
+                <LsLink
+                  url="https://livestockinformation.org.uk/cookies/"
+                  target="_blank"
+                >
+                  cookies
+                </LsLink>
+                .
               </p>
             </div>
           </div>

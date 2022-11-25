@@ -1,0 +1,77 @@
+@import "../../styles/colours";
+
+.ls-btn {
+  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
+  background: $brand-color-3;
+  color: $brand-color-14 !important;
+  font-size: 20px;
+  padding: 15px;
+  display: inline-block;
+  text-decoration: none !important;
+  box-shadow: 0 2px 0 #999;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  @media only screen and (max-width: 760px) {
+    width: 100%;
+    margin: 0 0 20px;
+    display: block;
+    text-align: center;
+  }
+  &:hover {
+    background-color: $brand-color-10;
+  }
+
+  &--clear {
+    background: $brand-color-13;
+  }
+  &--clear:hover {
+    background: $brand-color-17;
+  }
+  &--delete {
+    background: $brand-color-15;
+    color: #fff !important;
+  }
+  &--delete:hover {
+    background: $brand-color-16;
+  }
+  &--disabled,
+  &--disabled:hover {
+    opacity: 0.6;
+    background: $brand-color-13;
+    cursor: not-allowed;
+  }
+  &--link {
+    color: #1d70b8 !important;
+    text-decoration: underline!important;
+    background: none;
+    padding: 0;
+    box-shadow: none;
+    @media only screen and (max-width: 760px) {
+      width: auto;
+    }
+  }
+  &--link:hover {
+    background: none;
+  } 
+  &--link:focus {
+    outline: 3px solid transparent!important;
+    color: #0b0c0c!important;
+    background-color: $brand-color-10!important;
+    box-shadow: 0 -2px $brand-color-10 4px #0b0c0c!important;
+    text-decoration: none!important;
+  }
+  &--small {
+    font-size: 18px;
+    padding: 12px 25px;
+  }
+}
+
+.ls-link {
+  color: #1d70b8;
+  text-decoration: underline;
+  display: inline-block;
+  &--white {
+    color: #fff !important;
+  }
+}

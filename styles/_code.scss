@@ -1,0 +1,43 @@
+// Styling for code blocks
+// -----------------------------------------------------------------------------------------------
+
+code,
+.code--block,
+.code--slim {
+  display: inline-block;
+  font-family: Consolas,Monaco,"Andale Mono","Ubuntu Mono",monospace;
+  color: #0b0c0c;
+  border: none;
+  background-color: #f8f8f8;
+  word-break: break-word;
+  font-size: 14px !important;
+  white-space: pre-wrap;
+  word-spacing: normal;
+  font-weight: normal;
+  line-height: 1.75;
+  &.inline {
+    margin: 0
+  }
+}
+
+code {
+  width: 100%;
+}
+
+// Code styling
+.code--block {
+  display: block;
+  line-height: 2em;
+  padding: 10px;
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+
+.code--slim {
+  padding: 2px 4px;
+  line-height: 1.1em;
+}
+
+.code--yellow {
+  background-color: yellow;
+}

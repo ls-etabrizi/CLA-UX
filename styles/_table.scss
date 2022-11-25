@@ -1,0 +1,130 @@
+// Styling for tables
+// -----------------------------------------------------------------------------------------------
+
+
+
+.code-table {
+    width: 100%;
+    border: 1px solid grey;
+    border-spacing: 0;
+    tr:last-child {
+      border-bottom: 1px solid grey;
+    }
+  
+    td {
+      word-wrap: break-word;
+      max-width: auto;
+      vertical-align: top;
+      @media only screen and (max-width: 1024px) {
+        max-width: 250px;
+      }
+    }
+    .heading {
+      font-weight: bold;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border-top: 1px solid grey;
+      border-bottom: 1px solid grey;
+      background: #fff;
+    }
+    th {
+      font-size: 16px;
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid grey;
+    }
+    td p,
+    td a {
+      font-size: 14px;
+      margin: 0;
+      word-wrap: break-word;
+      max-width: 300px;
+    }
+    td {
+      padding: 10px;
+      background: #f8f8f8;
+    }
+  }
+
+  .ls-table {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.25;
+    color: #0b0c0c;
+    width: 100%;
+    margin-bottom: 20px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.ls-table__cell:last-child, .ls-table__header:last-child {
+    padding-right: 0;
+}
+
+.ls-table__cell, .ls-table__header {
+    padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #b1b4b6;
+    text-align: left;
+    vertical-align: top;
+}
+
+.ls-table__cell--numeric, .ls-table__header--numeric {
+    text-align: right;
+}
+
+.ls-table__header {
+    padding: 10px 20px 10px 0;
+    border-bottom: 1px solid #b1b4b6;
+    text-align: left;
+    vertical-align: top;
+}
+
+.ls-summary-list {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.ls-summary-list__actions, .ls-summary-list__key, .ls-summary-list__value {
+    display: table-cell;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b1b4b6;
+    box-sizing: border-box;
+}
+
+.ls-summary-list__row {
+     display: table-row; 
+     @media only screen and (max-width: 760px) {
+      display: block;
+      margin-bottom: 20px;
+     }
+}
+
+.ls-summary-list__key {
+    width: 30%;
+    @media only screen and (max-width: 760px) {
+      width: 100%;
+      display: block;
+    }
+}
+.ls-summary-list__value:last-child {
+    width: 70%;
+    @media only screen and (max-width: 760px) {
+      width: 100%;
+      display: block;
+      margin: 0;
+    }
+}
+
+.ls-table__caption {
+    font-weight: 700;
+    display: table-caption;
+    text-align: left;
+}
+

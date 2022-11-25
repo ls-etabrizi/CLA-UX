@@ -1,0 +1,84 @@
+.ls-checkbox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    &--inline {
+      flex-direction: row;
+      @media only screen and (max-width: 1024px) {
+        flex-direction: column;
+      }
+    }
+    &__item {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.25;
+        display: block;
+        position: relative;
+        min-height: 40px;
+        margin-bottom: 10px;
+        padding-left: 40px;
+        clear: left;
+      }
+      &__label {
+        display: inline-block;
+        margin-bottom: 30px;
+        padding: 8px 15px 5px;
+        cursor: pointer;
+        min-width: 160px;
+        touch-action: manipulation;
+      }
+      &__input {
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        top: -2px;
+        left: -2px;
+        width: 44px;
+        height: 44px;
+        margin: 0;
+        opacity: 0;
+      }
+      &__label:before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border: 2px solid;
+        background: transparent;
+      }
+      
+      &__label:after {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: 9px;
+        width: 18px;
+        height: 7px;
+        transform: rotate(-45deg);
+        border: solid;
+        border-width: 0 0 5px 5px;
+        border-top-color: transparent;
+        opacity: 0;
+        background: transparent;
+      }
+      &__input:checked + &__label:after {
+        opacity: 1;
+      }
+
+      &__input:focus + &__label:before {
+       outline: 3px solid #dddf4b;
+      }
+
+}
+
+
+
+
+
+
+  

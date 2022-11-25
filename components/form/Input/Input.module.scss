@@ -1,0 +1,28 @@
+.ls-input {
+  height: 2.5rem;
+  margin-top: 0;
+  padding: 5px;
+  border: 2px solid #0b0c0c;
+  border-radius: 0;
+  box-sizing: border-box;
+  appearance: none;
+  width: 100%;
+  font-size: 1.1875rem;
+  line-height: 1.31579;
+  &--small {
+    width: 30px;
+    text-align: center;
+    display: inline-block;
+    @media only screen and (max-width: 1024px) {
+      width: 25px;
+    }
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+  &:focus {
+    outline: 3px solid transparent;
+    outline-offset: 0;
+    box-shadow: inset 0 0 0 2px;
+  }
+}

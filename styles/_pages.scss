@@ -1,0 +1,259 @@
+// Page specific styling
+// -----------------------------------------------------------------------------------------------
+
+.approval-list {
+  width: 75%;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+  }
+  li {
+    display: flex;
+    border-bottom: 1px solid grey;
+    padding: 10px 0;
+    justify-content: space-between;
+  }
+  span {
+    justify-content: space-between;
+  }
+}
+
+.homepage-services-section {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid ls-colour("mid-grey");
+
+  @media (min-width: 48.0625em) {
+    padding: 60px 0;
+    flex-direction: row;
+  }
+
+  .homepage-services-text {
+    width: 100%;
+    padding: 0 20px 20px 0;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: 1024px) {
+      padding: 20px;
+    }
+  }
+
+  .homepage-services-image {
+    width: 100%;
+
+    img {
+      width: 100%;
+      @media only screen and (max-width: 1024px) {
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    }
+
+    @media (min-width: 48.0625em) {
+      margin-left: auto;
+    }
+
+    svg {
+      max-width: 100%;
+      height: auto;
+      @media only screen and (max-width: 1024px) {
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+.administrator-page {
+  .subscription-options {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+  }
+
+  .subscription-options button:last-child {
+    margin-left: 10px;
+  }
+
+  .display-btn-show,
+  .filter-btn-show,
+  .display-btn-hide,
+  .filter-btn-hide {
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    padding-left: 40px;
+    text-align: left;
+    display: inline-block;
+  }
+
+  .display-btn-show,
+  .display-btn-hide {
+    @media only screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+
+  .display-btn-hide {
+    background: url("data:image/svg+xml,%3Csvg id='Layer_1' width='100%25' height='100%25' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16,8A8,8,0,1,1,8,0,8,8,0,0,1,16,8Z' fill='%23626267'/%3E%3Cpath d='M7.61,7.61H3.33V3.33H7.61Zm5.06,0H8.39V3.33h4.28ZM7.61,12.67H3.33V8.39H7.61Zm5.06,0H8.39V8.39h4.28Z' fill='%23fff'/%3E%3C/svg%3E")
+      no-repeat;
+    min-width: 140px;
+  }
+
+  .display-btn-show {
+    background: url("data:image/svg+xml,%3Csvg id='Layer_1' width='100%25' height='100%25' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16,8A8,8,0,1,1,8,0,8,8,0,0,1,16,8Z' fill='%23626267'/%3E%3Cpath d='M13,4.23H3V3.4H13Zm0,1.26H3v.84H13Zm0,2.09H3v.84H13Zm0,2.09H3v.84H13Zm0,2.1H3v.83H13Z' fill='%23fff'/%3E%3C/svg%3E")
+      no-repeat;
+    min-width: 140px;
+  }
+  .filter-btn-show {
+    background: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3C!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E%3Csvg version='1.1' id='Layer_1' width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 16 16' style='enable-background:new 0 0 16 16;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23626267;%7D%0A%3C/style%3E%3Cpath class='st0' d='M16,8c0,4.4-3.6,8-8,8s-8-3.6-8-8s3.6-8,8-8S16,3.6,16,8z M8.5,4.5C8.5,4.2,8.3,4,8,4C7.7,4,7.5,4.2,7.5,4.5v3 h-3C4.2,7.5,4,7.7,4,8s0.2,0.5,0.5,0.5h3v3C7.5,11.8,7.7,12,8,12c0.3,0,0.5-0.2,0.5-0.5v-3h3C11.8,8.5,12,8.3,12,8s-0.2-0.5-0.5-0.5 h-3V4.5z'/%3E%3C/svg%3E%0A")
+      no-repeat;
+    min-width: 190px;
+  }
+
+  .filter-btn-hide {
+    background: url("data:image/svg+xml,%3Csvg id='Layer_1' width='100%25' height='100%25' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M16,8A8,8,0,1,1,8,0,8,8,0,0,1,16,8ZM4.5,7.5a.5.5,0,0,0,0,1h7a.5.5,0,0,0,0-1Z' transform='translate(0 0)' fill='%23626267'/%3E%3C/svg%3E")
+      no-repeat;
+    min-width: 190px;
+  }
+
+  .subscriptions {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    &__item {
+      width: 50%;
+      @media only screen and (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+    &__container {
+      padding: 10px;
+      transition: all 0.2s;
+    }
+    &__content {
+      display: flex;
+      padding: 10px 0;
+      justify-content: space-between;
+      align-items: center;
+      height: 30px;
+      border-bottom: 1px solid grey;
+      transition: all 2s;
+      > span:first-child {
+        font-weight: bold;
+      }
+    }
+    &__content:last-child {
+      padding: 25px 0 27px 0;
+      transition: all 0.2s;
+      @media only screen and (max-width: 760px) {
+        display: block;
+        height: auto;
+      }
+    }
+  }
+  .subscriptions-table {
+    &__item {
+      width: 100%;
+    }
+    &__container {
+      padding: 10px 0px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid grey;
+      transition: all 0.2s;
+    }
+    &__content {
+      display: flex;
+      padding: 10px 0;
+      justify-content: space-between;
+      align-items: center;
+      height: 30px;
+      width: 230px;
+      border: none;
+      transition: all 0.2s;
+      > span:first-child {
+        font-weight: bold;
+        display: none;
+      }
+    }
+    .state-content, .api-content {
+      width: 120px;
+    }
+    &__content:last-child {
+      padding: 10px 0;
+      justify-content: space-between;
+      align-items: center;
+      height: 30px;
+      transition: all 0.2s;
+      button:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.api-information-page {
+  .ls-details__summary {
+    display: table;
+    width: 100%;
+
+    .details-title,
+    .details-tag {
+      display: table-cell;
+      vertical-align: middle;
+      width: 100%;
+    }
+
+    .details-tag {
+      text-align: right;
+      width: 50%;
+
+      .ls-tag {
+        margin-right: 25px;
+      }
+    }
+  }
+}
+
+.services-page {
+  .h--min-250 {
+    min-height: 250px;
+  }
+  @media only screen and (max-width: 1024px) {
+    .h--min-250 {
+      min-height: auto;
+    }
+    .d--flex {
+      flex-direction: column;
+    }
+    .d--width-50 {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .d--absolute-b {
+      position: relative;
+    }
+  }
+}
+
+.service-banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  @media only screen and (max-width: 1024px) {
+    padding: 0 10px;
+  }
+  @media only screen and (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}

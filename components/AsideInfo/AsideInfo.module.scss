@@ -1,0 +1,24 @@
+@import "../../styles/colours";
+
+.aside {
+  &__heading {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px;
+  }
+
+  li {
+    margin-bottom: 30px;
+  }
+  a {
+    color: #0b0c0c;
+  }
+
+  @media only screen and (max-width: 1024px) {
+  }
+}
