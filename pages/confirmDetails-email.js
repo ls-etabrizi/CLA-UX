@@ -82,12 +82,7 @@ export default function confirm() {
                 </LsLink>
               </div>
 
-              <div
-                className={
-                  confirmationType === "mobile"
-                    ? "m--t-large m--b-xlarge ls-grid-column-two-thirds"
-                    : "hidden"
-                }
+              <div className={"hidden"}
               >
                 <Input
                   label="Confirm mobile number"
