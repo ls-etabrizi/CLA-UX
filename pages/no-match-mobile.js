@@ -66,7 +66,7 @@ export default function confirm() {
                 className={"m-- t-large m--b-xlarge ls-grid-column-two-thirds"}
               >
                 <Input
-                  label="Confirm last"
+                  label="Confirm moblile number"
                   onChange={setMobileMethod}
                   placeholder="Mobile Number"
                 />
