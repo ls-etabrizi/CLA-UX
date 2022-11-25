@@ -13,17 +13,6 @@ const Checkbox = ({
   error,
   inline
 }) => {
-  // example on how to implement collection
-
-  // const setApplicationTypeFunc = (event) => {
-  //   if(event.target.checked){
-  //     const update = [event.target.value, ...collection]
-  //     setCollection(update)
-  //   }else{
-  //     const remove = collection.filter(item => item !== event.target.value)
-  //     setCollection(remove)
-  //   }
-  // }
 
   const checkValue = (item) => {
     const checkedValue = collection.filter((colitem) => colitem === item)
