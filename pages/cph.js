@@ -6,18 +6,16 @@ import { LsLink } from "../components/LsLink";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 
-import { Input } from "../components/form/Input";
+import { CodeInput } from "../components/form/CodeInput";
 
 import { useRouter } from "next/router";
 
+
+
 export default function cph() {
   const [valid, setValid] = useState(false);
-
   const [nonValid, setNonValid] = useState(false);
-
   const [finalCph, setFinalCPh] = useState("");
-
-  const cphold = ["", "", "", "", "", "", "", "", ""];
 
   const router = useRouter();
 
@@ -40,7 +38,6 @@ export default function cph() {
 
   const checkFinalCPH = (cph) => {
     setFinalCPh(cph);
-
     if (cph === "121231234" || cph === "121231235" || cph === "121231236") {
       setNonValid(false);
       setValid(true);
@@ -50,18 +47,14 @@ export default function cph() {
     }
   };
 
-  const checkCPH = (event) => {
-    if (event.target.value !== "") {
-      cphold.splice(event.target.id, 1, event.target.value);
-    } else {
-      cphold.splice(event.target.id, 1, event.target.value);
-    }
-
-    if (cphold.join("").length === 9) {
+ 
+  const checkCPH = (e) => {
+    if (e.length === 9) {
       setValid(true);
-      checkFinalCPH(cphold.join(""));
+      checkFinalCPH(e);
     } else {
       setValid(false);
+      setNonValid(false);
     }
   };
 
@@ -96,17 +89,8 @@ export default function cph() {
               </div>
               <h3>Please enter your CPH </h3>
               <div className="m--b-xlarge">
-                <Input id="0" small onChange={checkCPH} maxLength="1" />
-                <Input id="1" small onChange={checkCPH} maxLength="1" />
-                <span className="division">/</span>
-                <Input id="2" small onChange={checkCPH} maxLength="1" />
-                <Input id="3" small onChange={checkCPH} maxLength="1" />
-                <Input id="4" small onChange={checkCPH} maxLength="1" />
-                <span className="division">/</span>
-                <Input id="5" small onChange={checkCPH} maxLength="1" />
-                <Input id="6" small onChange={checkCPH} maxLength="1" />
-                <Input id="7" small onChange={checkCPH} maxLength="1" />
-                <Input id="8" small onChange={checkCPH} maxLength="1" />
+              <CodeInput length={9} onChange={checkCPH} maxchar={1} setValid={setValid} setNonValid={setNonValid}   />
+                
                 <div className={valid ? "inline-icon" : "hidden"}>
                   <div className="success-icon"></div>
                   <span className="m--l-small m--t-medium"> CPH - valid </span>
@@ -119,7 +103,6 @@ export default function cph() {
                   </span>
                 </div>
               </div>
-
               <div className="d--flex d--flex-spaced">
                 <div className="m--b-large">
                   <LsLink onClick={nextStep} disabled={!valid} type="button">
