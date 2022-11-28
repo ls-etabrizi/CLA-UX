@@ -59,7 +59,7 @@ export default function cph() {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>Livestock Information Service</title>
         <meta name="description" content="Livestock Information Service" />
@@ -141,6 +141,6 @@ export default function cph() {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }

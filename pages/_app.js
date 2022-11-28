@@ -1,7 +1,11 @@
-import '../styles/main.scss'
+import "../styles/main.scss";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <div className="cla-main-container">
+      <Component {...pageProps} />
+    </div>
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -37,7 +37,7 @@ export default function confirm() {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>Livestock Information Service</title>
         <meta name="description" content="Livestock Information Service" />
@@ -120,6 +120,6 @@ export default function confirm() {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }

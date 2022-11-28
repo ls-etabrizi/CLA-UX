@@ -4,10 +4,22 @@
 html {
   padding: 0;
   margin: 0;
+  height: 100%;
 }
 
 body * {
   box-sizing: border-box;
+}
+
+#__next {
+  height: 100%;
+}
+
+
+.cla-main-container {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 }
 
 body {
@@ -17,6 +29,7 @@ body {
   padding-bottom: 100px;
   position: relative;
   min-height: 100vh;
+  height: 100%;
   padding:0;
   margin:0;
   @media only screen and (max-width: 1024px) {
@@ -33,7 +46,7 @@ h3 {
 .cla-width-container {
   width: 1320px;
   margin: 0 auto;
-  min-height: 800px;
+  flex: 1 1 auto;
   @media only screen and (max-width: 1024px) {
     width: 100%;
     padding: 0 20px;

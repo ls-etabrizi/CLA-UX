@@ -15,7 +15,7 @@ export default function Registration() {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>Livestock Information Service</title>
         <meta name="description" content="Livestock Information Service" />
@@ -46,6 +46,6 @@ export default function Registration() {
         <div className="ls-grid-column-one-third  m--t-large"></div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }

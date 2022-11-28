@@ -7,7 +7,7 @@ import { Footer } from "../components/Footer";
 export default function support() {
 
   return (
-    <div>
+    <>
       <Head>
         <title>Livestock Information Service</title>
         <meta name="description" content="Livestock Information Service" />
@@ -44,6 +44,6 @@ export default function support() {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }

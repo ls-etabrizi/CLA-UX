@@ -21,7 +21,7 @@ export default function email() {
   };
 
   return (
-    <div>
+    <>
       <Head>
         <title>Livestock Information Service</title>
         <meta name="description" content="Livestock Information Service" />
@@ -72,6 +72,6 @@ export default function email() {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 }
