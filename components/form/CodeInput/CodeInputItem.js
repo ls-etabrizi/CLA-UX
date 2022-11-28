@@ -23,7 +23,7 @@ export const CodeInputItem = forwardRef(({ onChange, handleBack, max, indicator 
   return (
     <span>
     {(indicator === 3 || indicator === 6) && <span className="division">/</span>}
-    <input className={`${styles['ls-input__item']}`} ref={ref} maxLength={max} onKeyUp={keyUp}  />
+    <input className={`${styles['ls-input__item']}`} ref={ref} maxLength={max} type="tel" onKeyUp={keyUp}  />
     </span>
   );
 });
