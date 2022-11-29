@@ -19,7 +19,7 @@ export default function confirm() {
 
   const nextStep = () => {
     if (email === "person@email.com") {
-      router.push("email");
+      router.push("email-confirmed");
     }
     if (email !== "person@email.com") {
       router.push("no-match-email");

@@ -39,7 +39,7 @@ export default function email() {
               <div className="m--b-xlarge">
                 {/* <p>We've hidden some of the characters of your email shown for security reasons. This email address is the one we have on record for your CPH number.</p> */}
                 <p className="m--b-xlarge">
-                  It might take a few of minutes to arrive. The code will expire
+                  It might take a few minutes to arrive. The code will expire
                   after 2 hours.
                 </p>
                 <div className="ls-grid-column-one-third">
