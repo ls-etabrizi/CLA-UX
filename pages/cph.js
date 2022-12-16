@@ -31,6 +31,9 @@ export default function cph() {
     if (finalCph === "121231236") {
       router.push("confirmDetails-email");
     }
+    if (finalCph === "121231237") {
+      router.push("no-details");
+    }
   };
   const backHome = () => {
     router.push("/");
@@ -38,7 +41,7 @@ export default function cph() {
 
   const checkFinalCPH = (cph) => {
     setFinalCPh(cph);
-    if (cph === "121231234" || cph === "121231235" || cph === "121231236") {
+    if (cph === "121231234" || cph === "121231235" || cph === "121231236" ||  cph === "121231237") {
       setNonValid(false);
       setValid(true);
     } else {
@@ -93,13 +96,13 @@ export default function cph() {
                 
                 <div className={valid ? "inline-icon" : "hidden"}>
                   <div className="success-icon"></div>
-                  <span className="m--l-small m--t-medium"> CPH - valid </span>
+                  <span className="m--l-small m--t-medium"> Valid CPH format </span>
                 </div>
                 <div className={nonValid ? "inline-icon" : "hidden"}>
                   <div className="failed-icon"></div>
                   <span className="m--l-small m--t-medium">
                     {" "}
-                    CPH - not valid{" "}
+                    CPH format is not valid{" "}
                   </span>
                 </div>
               </div>
