@@ -11,6 +11,8 @@ import { useRouter } from "next/router";
 export default function email() {
   const router = useRouter();
 
+  const query = router.query.verifyAgain;
+
   const password = () => {
     router.push("password");
   };
@@ -29,16 +31,16 @@ export default function email() {
             <div>
               <h1 className="m--b-xlarge">Please check your inbox</h1>
               <h2 className="m--b-xlarge" onClick={password}>
-                We've sent you a verification email to{" "}
+                We've {query ? "re" : ""}sent you a verification email to{" "}
                 <strong>*****@email.com</strong>
               </h2>
               <div className="m--b-xlarge">
                 {/* <p>We've hidden some of the characters of your email shown for security reasons. This email address is the one we have on record for your CPH number.</p> */}
                 <p className="m--b-large">
-                  In order to verify your account, we've sent you a verification
-                  email. We've obscured some of the characters for security.
-                  Please follow the steps on the verification email to get
-                  access to Livestock information.{" "}
+                  In order to verify your account, we've {query ? "re" : ""}{" "}
+                  sent you a verification email. We've obscured some of the
+                  characters for security. Please follow the steps on the
+                  verification email to get access to Livestock information.{" "}
                 </p>
 
                 <p className="m--b-xlarge">
@@ -46,6 +48,19 @@ export default function email() {
                   <strong>valid for 24hrs</strong>, please check your spam
                   folder, if not received.
                 </p>
+
+                {!query ? (
+                  <>
+                    <p className="m--b-xxlarge">
+                      {" "}
+                      I've not received my verification email? {" "}
+                      <LsLink url="email?verifyAgain=true">
+                        Re-try sending verification
+                      </LsLink>
+                      .
+                    </p>
+                  </>
+                ) : null}
 
                 <p className="m--b-xxlarge">
                   {" "}

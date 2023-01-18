@@ -34,6 +34,9 @@ export default function cph() {
     if (finalCph === "121231237") {
       router.push("no-details");
     }
+     if (finalCph === "121231238") {
+      router.push("flock-details");
+    }
   };
   const backHome = () => {
     router.push("/");
@@ -41,7 +44,7 @@ export default function cph() {
 
   const checkFinalCPH = (cph) => {
     setFinalCPh(cph);
-    if (cph === "121231234" || cph === "121231235" || cph === "121231236" ||  cph === "121231237") {
+    if (cph === "121231234" || cph === "121231235" || cph === "121231236" ||  cph === "121231237" || cph === "121231238") {
       setNonValid(false);
       setValid(true);
     } else {

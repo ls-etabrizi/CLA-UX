@@ -15,6 +15,8 @@ export default function email() {
     router.push("email-support");
   };
 
+  const query = router.query.signup;
+
   const backHome = () => {
     router.push("/");
   };
@@ -33,18 +35,27 @@ export default function email() {
             <div>
               <h1 className="m--b-xlarge">Please create your sign in name</h1>
               <p className="m--b-large">
-               Now that you've completed verification via your mobile number, we need you to create a sign in name. 
+                Now that you've completed verification via your {query === 'flock' ? 'flock number / post code' : 'mobile number'}, we need you to create a sign in name.
               </p>
-            <p className="m--b-xlarge">This must be your email address so we can contact you for any future corrospondence. </p>
+              <p className="m--b-xlarge">
+                This must be your email address so we can contact you for any
+                future corrospondence.{" "}
+              </p>
 
               <div className="m--b-xlarge ls-grid-column-two-thirds">
                 <Input label="Email Address" type="text" />
                 <Input label="Confirm Email Address" type="text" />
               </div>
 
-              <p>We will send you a verification email to this address. In order to complete registration.</p>
+              <p>
+                We will send you a verification email to this address. In order
+                to complete registration.
+              </p>
 
-              <p className="ls-inset-text">You will need to use this <strong>email address</strong>, in order to <strong>sign in</strong>.</p>
+              <p className="ls-inset-text">
+                You will need to use this <strong>email address</strong>, in
+                order to <strong>sign in</strong>.
+              </p>
 
               <div className="d--flex d--flex-spaced">
                 <div className="m--t-large m--b-large">
