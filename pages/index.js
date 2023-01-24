@@ -5,10 +5,18 @@ import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { WelcomeBanner } from "../components/WelcomeBanner";
 import { AsideInfo } from "../components/AsideInfo";
+import { useRouter } from "next/router";
 
 import { Input } from "../components/form/Input";
 
 export default function Home() {
+
+  const router = useRouter();
+
+  const goToSignup = () => {
+    router.push("/sign-up");
+  };
+  
   return (
     <>
       <Head>
@@ -21,27 +29,18 @@ export default function Home() {
         title="Livestock Information Service"
         intro="The new Livestock Information Service for reporting sheep, goat and deer movements."
       />
-      <div className="cla-width-container">
+      <div className="cla-width-container landing">
         <div className="d--flex m--t-xlarge">
           <div className="ls-grid-column-two-thirds">
-            <div className="ls-grid-column-two-thirds">
-              <h1>Sign in </h1>
-              <div className="m--b-xlarge">
-                <Input label="Sign in Email" placeholder="Sign in Email" />
-                <Input
-                  label="Password"
-                  type="password"
-                  placeholder="Password"
-                />
-                <LsLink>Forgot your password?</LsLink>
-              </div>
-              <div className="m--b-xxlarge">
-                <LsLink type="button">Sign in</LsLink>
-              </div>
-              <p className="p--large">
-                Not registered yet?{" "}
-                <LsLink url="cph">Register for an account</LsLink>
-              </p>
+            <div className="ls-home">
+              <h2>Welcome to the Livestock Information Service</h2>
+              <p>This is the first step in a series of changes to livestock reporting in England, replacing the current ARAMS service and in the future, providing a single place for all livestock reporting.  </p>
+              <h2>Livestock reporting</h2>
+              <p>The new Livestock Information Service can currently be used for reporting sheep, goat and deer movements. There is also an option to maintain an online Holding Register by recording other livestock events such as tagging.</p>
+              <h2>Create account or Sign in</h2>
+              <p>To create an account, you will need a CPH and be registered as a keeper.</p>
+              <LsLink onClick={goToSignup} className="m--b-xlarge" type="button">Create account / Sign in</LsLink>
+              <p>Using the online service to report your livestock movements makes a real difference for traceability - digital notifications are faster and more accurate.</p>
             </div>
           </div>
           <div className="ls-grid-column-one-third  m--t-large">

@@ -46,7 +46,7 @@ const Header = () => {
       <nav
         className={cx(
           styles['header__navigation'] + ' ' + (navToggled ? styles['header__navigation--open'] : ''),
-          (router.pathname === '/' ? 'hidden' : ''),
+          (router.pathname === '/' ? 'hidden' : ''), 
           (router.pathname === '/success' ? 'hidden' : '')
         )}
       >
