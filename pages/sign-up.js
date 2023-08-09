@@ -3,7 +3,7 @@ import Head from "next/head";
 import { LsLink } from "../components/LsLink";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import { WelcomeBanner } from "../components/WelcomeBanner";
+
 import { AsideInfo } from "../components/AsideInfo";
 
 import { Input } from "../components/form/Input";
@@ -29,7 +29,7 @@ export default function Home() {
                   type="password"
                   placeholder="Password"
                 />
-                <LsLink>Forgot your password?</LsLink>
+                <LsLink>Forgot your password?ssss</LsLink>
               </div>
               <div className="m--b-xxlarge">
                 <LsLink type="button">Sign in</LsLink>
