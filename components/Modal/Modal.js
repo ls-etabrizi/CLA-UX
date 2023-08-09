@@ -1,6 +1,4 @@
 import React from 'react'
-
-import FocusLock from 'react-focus-lock'
 import styles from './Modal.module.scss'
 
 // Modal component
