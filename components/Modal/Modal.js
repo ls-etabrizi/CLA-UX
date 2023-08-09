@@ -5,7 +5,7 @@ import styles from './Modal.module.scss'
 
 const Modal = ({ open = false, children, onClick, small, large }) => {
   return (
-    <FocusLock disabled={!open}>
+    <>
       <div className={`${styles['modal-overlay']} ${open ? styles['modal-overlay--open'] : ``}`} />
       <div
         className={`${styles['modal']} ${open ? styles['modal--open'] : ``} ${small ? styles['modal--small'] : ``} ${large ? styles['modal--large'] : ``}`}
@@ -30,7 +30,7 @@ const Modal = ({ open = false, children, onClick, small, large }) => {
           <div>{children}</div>
         </div>
       </div>
-    </FocusLock>
+      </>
   )
 }
 
