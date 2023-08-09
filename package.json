@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@livestockinformation/ui-lib": "^0.0.54",
     "classnames": "^2.2.6",
     "next": "13.0.3",
     "react": "18.2.0",
