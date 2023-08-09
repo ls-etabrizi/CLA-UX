@@ -56,8 +56,7 @@ export default function Home() {
       </div>
       <Footer />
       <Modal large open={openModal} onClick={() => {setOpenModal(!openModal)}}>
-        <p>sign in form</p>
-        <iframe src="https://myaccount.rcvs.org.uk/RCVS/Sign_In.aspx?WebsiteKey=ecdc2e9b-8306-4886-9820-c604d07e2414&LoginRedirect=true&returnurl=%2f" ></iframe>
+        <img src="img/rcvs.png" width="100%"/>
       </Modal>
 
 
